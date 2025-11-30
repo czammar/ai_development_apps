@@ -15,6 +15,7 @@ py -m venv venv\ # Opcion 1
 **MacOS o GNU/Linux**
 ```
 python3 -m venv venv/
+```
 
 ## Paso 2: Activar el ambiente virtual
 ```
@@ -33,8 +34,16 @@ En una terminal con el ambiente virtual activo:
 uvicorn src.recipes.api:app --reload
 ```
 
+Lo anterior va a desplegar el API en `http://localhost:8000/docs`. 
+
+![images/chefbot_api.png](images/chefbot_api.png)
+
 ## Paso 5: Desplegar el ChatBot de Streamlit
 En **otra** terminal con el ambiente virtual activo:
 ```
 streamlit run src/recipes/chatbot.py
 ```
+
+Ello desplegará el chatbot en `http://localhost:8501/`
+
+![images/chefbot_chat.png](images/chefbot_chat.png)
