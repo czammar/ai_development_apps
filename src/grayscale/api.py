@@ -25,7 +25,7 @@ async def to_grayscale(file: UploadFile = File(...)):
         # Save the grayscale image back to a BytesIO object
         output_stream = io.BytesIO()
         # Save as PNG to avoid potential quality loss (JPEG is lossy)
-        grayscale_img.save(output_stream, format="PNG") 
+        grayscale_img.save(output_stream, format="PNG")
         output_stream.seek(0)
 
         # Return the processed image bytes as a file response
